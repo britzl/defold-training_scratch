@@ -39,11 +39,9 @@ function on_message(self, message_id, message, sender)
 		-- collided with player 1 goal - reset position and increase score
 		if message.group == hash("goalp1") then
 			go.set_position(self.original_position)
-			msg.post("score", "increase_player1")
 		-- collided with player 2 goal - reset position and increase score
 		elseif message.group == hash("goalp2") then
 			go.set_position(self.original_position)
-			msg.post("score", "increase_player2")
 		-- collided with a padde - add random adjustment to vertical direction
 		elseif message.group == hash("paddle") then
 			local dist = go.get_position(message.other_id) - go.get_position()
