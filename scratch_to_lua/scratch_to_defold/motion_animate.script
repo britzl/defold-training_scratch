@@ -1,0 +1,3 @@
+function init(self)
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, vmath.vector3(500, 1000, 0), go.EASING_LINEAR, 1)
+end

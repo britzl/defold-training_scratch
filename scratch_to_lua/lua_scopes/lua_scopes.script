@@ -1,0 +1,22 @@
+-- global function, accessible from everywhere
+everywhere = 1
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	
+	-- a is available from the point of declaration to the end of the scope
+	local a = 10
+
+	for i=1,10 do
+		print(i, a)
+		a = a + i
+	end
+	print(i, a)
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.released then
+		factory.create("#factory", vmath.vector3(action.x, action.y, 0))
+		everywhere = everywhere * 2
+	end
+end

@@ -1,0 +1,64 @@
+images {
+  image: "/assets/images/icon_48.png"
+}
+images {
+  image: "/assets/images/shipBeige_manned.png"
+}
+images {
+  image: "/assets/images/shipBlue_manned.png"
+}
+images {
+  image: "/assets/images/shipGreen_manned.png"
+}
+images {
+  image: "/assets/images/shipPink_manned.png"
+}
+images {
+  image: "/assets/images/shipYellow_manned.png"
+}
+images {
+  image: "/assets/images/p1_front.png"
+}
+animations {
+  id: "player_walk"
+  images {
+    image: "/assets/images/player_walk/p1_walk01.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk02.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk03.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk04.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk05.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk06.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk07.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk08.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk09.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk10.png"
+  }
+  images {
+    image: "/assets/images/player_walk/p1_walk11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 30
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 1
+inner_padding: 0

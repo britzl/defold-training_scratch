@@ -1,0 +1,58 @@
+function init(self)
+	-- this is a one-line comment
+	
+	--[[this is a multi-
+	line comment]]
+
+	for i=1,10 do
+		print("Hello!")
+	end
+	
+	local x = 1
+	repeat
+		x = x + 1
+	until x == 10
+
+	x = 1
+	while x < 10 do
+		x = x + 1
+	end
+	
+	if x < 5 then
+		print("Hello!")
+	end
+	
+	if x < 5 then
+		print("Hello!")
+	else
+		print("Bye!")
+	end
+	
+	if x > 6 then
+		print("Large")
+	elseif x > 3 then
+		print("Medium")
+	else
+		print("Small")
+	end
+
+	local power = 6
+	local name = "Sven"
+	if (power > 5) and (name == "Sven") then
+		print("Sven is powerful!")
+	end
+	
+	if (name == "Sven") or (name == "Sara") then
+		print("Hello Sven or Sara!")
+	end
+	
+	local health = 1
+	if not (health == 0) and (name == "Sven") then
+		print("Sven is alive!")
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

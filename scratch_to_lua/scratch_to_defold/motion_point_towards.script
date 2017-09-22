@@ -1,0 +1,22 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function update(self, dt)
+	local amount = vmath.vector3(0, 300, 0) * dt
+	local pos = go.get_position()
+	local pos = pos + vmath.rotate(go.get_rotation(), amount)
+	go.set_position(pos)	
+end
+
+function on_input(self, action_id, action)
+	local pos = go.get_position()
+	local mouse = vmath.vector3(action.x, action.y, 0)
+	local rad = math.atan2(pos.x - mouse.x, mouse.y - pos.y)
+	go.set_rotation(vmath.quat_rotation_z(rad))	
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

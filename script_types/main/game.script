@@ -1,0 +1,46 @@
+local levels = require "main.levels"
+
+
+function init(self)
+	self.logos = {}
+	self.pins = {}
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("startlevel") then
+		while #self.logos > 0 do
+			go.delete(table.remove(self.logos))
+		end
+		while #self.pins > 0 do
+			go.delete(table.remove(self.pins))
+		end
+		self.pins = levels.create_pins(message.id, "/factories#pin")
+		msg.post(".", "acquire_input_focus")
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.released then
+		local id = factory.create("/factories#logo", vmath.vector3(action.x, action.y, 0))
+		table.insert(self.logos, id)
+		if #self.logos == 10 then
+			msg.post(".", "release_input_focus")
+			msg.post("menu", "enable")
+		end
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

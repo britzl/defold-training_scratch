@@ -1,0 +1,38 @@
+function init(self)
+	-- this is a one-line comment
+	
+	--[[this is a multi-
+	line comment]]
+
+	local friends = {}
+	table.insert(friends, "Sven")
+	print(friends)
+	--pprint(friends)
+
+	table.insert(friends, "Benjamin")
+	table.insert(friends, "Mikael")
+	table.insert(friends, "Oleg")
+	table.insert(friends, "Bengan")
+	table.insert(friends, 2, "Sara")
+	table.remove(friends, 1)
+	table.remove(friends)
+	
+	local name = friends[1]
+	print("My first friend is " .. name)
+	
+	local count = #friends
+	print("I have " .. count .. " friends")
+	
+	friends[1] = "Sara"
+	friends[#friends] = "Sven"
+	
+	for i=1,#friends do
+		if friends[i] == "Sven" then
+			print("Sven is my friend!")
+		end
+	end
+end
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

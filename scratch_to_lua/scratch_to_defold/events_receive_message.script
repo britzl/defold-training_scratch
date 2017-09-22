@@ -1,0 +1,10 @@
+function on_message(self, message_id, message, sender)
+	if message_id == hash("message1") then
+		print("Hello!")
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

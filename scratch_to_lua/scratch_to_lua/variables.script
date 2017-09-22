@@ -1,0 +1,36 @@
+function init(self)
+	-- this is a one-line comment
+	
+	--[[this is a multi-
+	line comment]]
+	
+	local power = 0
+	power = power + 1
+	print("My power is " .. tostring(power))
+	
+	local name = "Sven"
+	
+	local result = 5 + 10
+	print(result)
+	result = 5 - 10
+	result = 5 * 10
+	result = 5 / 10
+	result = 5 % 10
+	
+	print("Hello " .. name)
+	
+	local length = #name
+	print("The name is " .. tostring(length) .. " characters long")
+	
+	local c = string.sub(name, 2, 2)
+	print("The second character of " .. name .. " is " .. c)
+	
+	print("Random number " .. tostring(math.random(1, 10)))
+	
+	print(math.abs(-5))
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

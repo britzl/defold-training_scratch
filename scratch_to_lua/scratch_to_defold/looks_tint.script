@@ -1,0 +1,8 @@
+function init(self)
+	go.set("#sprite", "tint", vmath.vector4(1.0, 0.0, 0.0, 1.0))
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

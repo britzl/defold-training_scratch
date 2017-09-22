@@ -1,0 +1,13 @@
+-- shared between all thing.script instances
+local count = 0
+
+function init(self)
+	count = count + 1
+	
+	-- unique for this specific instance of the script
+	self.date = os.date()
+end
+
+function update(self, dt)
+	label.set_text("#label", tostring(count) .. " " .. self.date .. " " .. everywhere)
+end

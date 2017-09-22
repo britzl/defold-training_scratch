@@ -1,0 +1,38 @@
+function init(self)
+	go.set_position(vmath.vector3(50, 100, 0))
+	
+	pos = go.get_position()
+	pos.x = pos.x + 5
+	pos.y = pos.y + 10
+	go.set_position(pos)
+	
+	pos = go.get_position()
+	pos.x = 50
+	pos.y = 100
+	go.set_position(pos)
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end
